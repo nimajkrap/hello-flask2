@@ -1,4 +1,6 @@
 from flask import Flask, request, render_template
+import nvapi
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -23,7 +25,7 @@ def youtube():
     keyword = request.form["keyword"]
     print(keyword)
     linknum = 0 # 0은 이영지,  1은 임영웅
-    if keyword == '이영자':
+    if keyword == '이영지':
         linknum = 0
     elif keyword == '임영웅':
         linknum = 1

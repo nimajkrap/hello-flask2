@@ -1,7 +1,10 @@
 import nvapi
 
-keyword = input("맛집검색: ") # 입력창에 입력 받기
-nvapi.blog(keyword)
+keyword = "경성대 밥장인"
+data = nvapi.blog(keyword)
+for b in data:
+    print(b["title"])
+
 
 
 # 밑에는 연습
