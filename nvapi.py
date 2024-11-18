@@ -10,8 +10,8 @@ import ssl
 
 def blog(keyword):
     ssl._create_default_https_context = ssl._create_unverified_context
-    client_id = "uW5FAiwsRZfhQkA2eCLg"
-    client_secret = "h_OkBzUssK"
+    client_id = nvkey.CLIENT_ID
+    client_secret = nvkey.CLIENT_SECRET
     encText = urllib.parse.quote(keyword)
     url = "https://openapi.naver.com/v1/search/blog?query=" + encText # JSON 결과
     # url = "https://openapi.naver.com/v1/search/blog.xml?query=" + encText # XML 결과
